@@ -15,7 +15,7 @@ Home
 
 <nav class="flex justify-between items-center py-3 px-4 fixed w-full z-50">
   <div class="w-6/12">
-    <img src="assets/netflix.png" alt="logo" class="w-5/12 md:w-2/12" />
+    <img src="{% static 'privateflix.png' %}" alt="logo" class="w-5/12 md:w-2/12" />
   </div>
 
   <div>
@@ -26,7 +26,7 @@ Home
 </nav>
 <header
   class="min-h-screen bg-black bg-opacity-75 showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat"
-  style="background-image: url('assets/background_netflix.jpg')"
+  style="background-image: url('{% static 'background_netflix.jpg' %}');"
 >
   <div
     class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col"
@@ -72,7 +72,7 @@ Home
     </h5>
   </div>
   <div class="md:w-1/2 flex justify-center items-center">
-    <img src="assets/tv.png" class="w-8/12" alt="" />
+    <img src="{% static 'tv.png' %}" class="w-8/12" alt="" />
   </div>
 </section>
 
@@ -117,9 +117,9 @@ Home
 </section>
 <footer class="px-5 py-10">
   <ul class="flex justify-between items-center">
-    <li>&copy; 2021</li>
+    <li>Free Content</li>
     <li>Made with Django and Tailwind</li>
-    <li>By OtchereDev</li>
+    <li>&copy; 2025</li>
   </ul>
 </footer>
 
