@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'core',
 ]
 
+# Auth setting
+AUTH_USER_MODEL = 'core.CustomUser'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

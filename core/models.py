@@ -4,16 +4,16 @@ import uuid
 
 AGE_CHOICES=(
     ('All','All'),
-    ('Kids', 'Kids'),
+    ('Kids', 'Kids')
 )
 
 MOVIE_CHOICES=(
     ('seasonal', 'Seasonal'),
-    ('single', 'Single'),
+    ('single', 'Single')
 )
 
 class CustomUser(AbstractUser):
-    profiles=models.ManyToManyField('Profile', null=True,blank=True)
+    profiles=models.ManyToManyField('Profile',blank=True)
 
 class Profile(models.Model):
     name=models.CharField(max_length=225)
@@ -22,7 +22,7 @@ class Profile(models.Model):
 
 class Movie(models.Model):
     title=models.CharField(max_length=225)
-    description =models.TextField(blank=True, null=True)
+    description =models.TextField()
     created=models.DateTimeField(auto_now_add=True)
     uuid=models.UUIDField(default=uuid.uuid4)
     type=models.CharField(max_length=10, choices=MOVIE_CHOICES)
