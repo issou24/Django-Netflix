@@ -11,6 +11,7 @@ class Home(View):
 class ProfileList(View):
     def get(self, request, *args, **kwargs):
         profiles=request.user.profiles.all()
+        print(profiles)
         return render(request, 'profileList.html',{
             'profiles':profiles
         })
