@@ -3,7 +3,7 @@ from django.views import View
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
-from .forms import Profile
+from .forms import ProfileForm
 
 class Home(View):
     def get(self,request,*args, **kwargs):
