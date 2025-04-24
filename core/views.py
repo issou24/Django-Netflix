@@ -5,6 +5,7 @@ from django.utils.decorators import method_decorator
 
 from .forms import ProfileForm
 
+
 class Home(View):
     def get(self,request,*args, **kwargs):
         if request.user.is_authenticated:
