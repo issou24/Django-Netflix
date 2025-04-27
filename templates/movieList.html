@@ -55,7 +55,7 @@ Privateflix
                 <div class="flex   items-center min-w-full  movie_lis">
                     {% for movie in movies %}
                     
-                        <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                        <a href="#">
                             <div class=" h-40 m-4  bg-blue-500 overflow-hidden flex-shrink-0 rounded-md cursor-pointer w-40">
                                 <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
                             </div>
