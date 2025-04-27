@@ -60,3 +60,16 @@ class Watch(View):
             })
         except Profile.DoesNotExist:
             return redirect(to='core:profile_list')
+
+@method_decorator(login_required,name='dispatch')
+class ShowMovieDetail(View):
+    def get(self,request,movie_id,*args, **kwargs):
+        try:
+            
+            movie=Movie.objects.get(uuid=movie_id)
+
+            return render(request,'movieDetail.html',{
+                'movie':movie
+            })
+        except Movie.DoesNotExist:
+            return redirect('core:profile_list')
