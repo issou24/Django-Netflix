@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-Privateflix 
+Netflix 
 {% endblock title %}
 
 {% block others %}
@@ -23,7 +23,7 @@ Privateflix
                     {% lorem 1 %}
                 </p>
                 <div class="flex my-4">
-                    <a href="#">
+                    <a href="{% url 'core:play' movie_id=show_case.uuid %}">
                     
                         <button class="flex items-center bg-white py-2 px-5 rounded-md" style='color:black;'>
                             <ion-icon name="play" class="text-2xl"></ion-icon>
@@ -33,7 +33,7 @@ Privateflix
                         </button>
                     </a>
 
-                    <a href="#">
+                    <a href="{% url 'core:show_det' movie_id=show_case.uuid %}">
                         <button class="ml-4 text-white flex items-center bg-gray-500 bg-opacity-80 py-2 px-5 rounded-md">
                         
                             <ion-icon name="information-circle-outline" class="text-2xl" ></ion-icon>
@@ -50,7 +50,7 @@ Privateflix
         <section class='bg-primary_black  min-h-screen flex justify-center py-10'>
             <div class="p-8 w-10/12 relative" >
                 <h2 class="text-gray-200 text-2xl font-medium">
-                    Popular on Privateflix
+                    Popular on Netflix
                 </h2>
                 <div class="flex   items-center min-w-full  movie_lis">
                     {% for movie in movies %}
